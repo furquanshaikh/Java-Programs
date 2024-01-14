@@ -1,0 +1,16 @@
+class PrimeNumber{
+    public static void main(String[] args) {
+    //WAP to check if given integer is prime number or not
+        int num=73;
+        boolean flag=true;
+        for(int i=2;i<num-1;i++){
+            if(num%i==0){
+                flag=false;
+            }
+        }
+        if(flag)
+        System.out.println("is Prime Number");
+        else
+        System.out.println("is Not Prime Number");
+    }
+}

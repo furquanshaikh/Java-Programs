@@ -1,0 +1,22 @@
+class RemoveDuplicateWords{
+    public static void main(String[] args) {
+    //WAP to remove Duplicate words from a given sentence
+
+        String str="this is a a java java code code";
+        String split[]=str.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<split.length;i++){
+            boolean flag=false;
+            for(int j=i+1;j<split.length;j++){
+                if(split[i].equals(split[j])&&sb.indexOf(split[i])==-1){
+                    flag=true;
+                    break;
+                }
+            }
+            if(!flag){
+                sb.append(split[i]+" ");
+            }
+        }
+            System.out.print(sb.toString());    
+    }
+}

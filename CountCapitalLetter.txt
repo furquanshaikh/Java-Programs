@@ -1,0 +1,21 @@
+class CountCapitalLetter{
+    public static void main(String[] args) {
+    //WAP to count capital letter for given String
+        String str="FurQUaN ShaiKH";
+        int count=0;
+        
+        for(int i=0;i<str.length();i++){
+            if(Character.isUpperCase(str.charAt(i))){
+                count++;
+            }
+        }
+        
+        /*for(int i=0;i<str.length();i++){
+            if((str.charAt(i)>=65)&&(str.charAt(i)<=90)){
+                count++;
+            }
+        }*/
+        
+        System.out.print(count);
+    }
+}

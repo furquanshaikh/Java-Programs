@@ -1,0 +1,14 @@
+class ReverseSentence{
+    public static void main(String[] args) {
+    //WAP to reverse sentence
+        String str="this is a java program";
+        String revStr="";
+        
+        String split[]=str.split(" ");
+        
+        for(int i=0;i<split.length;i++){
+            revStr=split[i]+" "+revStr;
+        }
+        System.out.print(revStr+" ");
+    }
+}

@@ -1,0 +1,19 @@
+import java.util.*;
+class HighestAndLowestFromList{
+    public static void main(String[] args) {
+    //WAP to get the highest and lowest values of a List
+    
+    List<Integer> al = new ArrayList<>(Arrays.asList(34,12,5,77));
+    System.out.println("ArrayList");
+    System.out.println(al);
+    
+    //Method 1
+    Collections.sort(al);
+    System.out.println(al.get(0)+" - Lowest");
+    System.out.println(al.get(al.size()-1)+" - Highest");
+    
+    //Method 2
+    System.out.println(Collections.min(al)+" - Lowest");
+    System.out.println(Collections.max(al)+" - Highest");
+    }
+}

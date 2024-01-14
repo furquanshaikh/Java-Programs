@@ -1,0 +1,15 @@
+class ReverseEachWord{
+    public static void main(String[] args) {
+    //WAP to reverse each word in String
+        String str="this is a java program";
+        String split[]=str.split(" ");
+        
+        for(String s:split){
+            System.out.print(revWord(s)+" ");
+        }
+    }
+
+    public static String revWord(String word){
+        return new StringBuilder(word).reverse().toString();
+    }
+}

@@ -1,0 +1,18 @@
+import java.util.*;
+class CountNumberOfWords {
+    //WAP to count number of words in a given string
+    public static void main(String[] args) {
+        String str="this is a a java java program";
+        String newStr[] = str.split(" ");
+        Map<String,Integer> hm = new LinkedHashMap<>();
+        
+        for(String a:newStr){
+            hm.put(a,hm.getOrDefault(a,0)+1);
+        }
+        
+        //System.out.println(hm);
+        for(Map.Entry<String,Integer> ety:hm.entrySet()){
+          System.out.println(ety.getKey()+" : "+ety.getValue());
+        }
+    }
+}

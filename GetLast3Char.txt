@@ -1,0 +1,14 @@
+class GetLast3Char{
+    public static void main(String[] args) {
+    //WAP to get last 3 character from String
+        String str="programming";
+        //way 1
+        for(int i=str.length()-3;i<str.length();i++){
+            System.out.print(str.charAt(i)+" ");
+        }
+        
+        //way 2
+        String newstr= str.substring(str.length()-3,str.length());
+        System.out.print(newstr);
+    }
+}

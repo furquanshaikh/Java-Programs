@@ -1,0 +1,19 @@
+class First2LargestNumber{
+    public static void main(String[] args) {
+    //WAP to find First 2 Largest Number
+        int a[]={22,1,4,5,6,13};
+        int max1=0,max2=0;
+        
+        for(int i=0;i<a.length;i++){
+            if(max1<a[i]){
+                max2=max1;
+                max1=a[i];
+            }
+            else if(max2<a[i]){
+                max2=a[i];
+            }
+        }
+        System.out.println(max1);
+        System.out.println(max2);
+    }
+}

@@ -1,0 +1,8 @@
+class CharacterCount {
+    public static void main(String[] args) {
+    //WAP to count a particular character in a given string
+        String str="I love programming";
+        int count = str.length()-str.replaceAll("m","").length();
+        System.out.println(count+" times 'm' is occuring");
+    }
+}

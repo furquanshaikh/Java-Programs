@@ -1,0 +1,20 @@
+import java.util.*;
+class CheckElementInCollections{
+    public static void main(String[] args) {
+    //Write a Program to check if an element is part of a collection or not.
+     
+     Map<Integer,String> hm = new HashMap<>();
+     hm.put(1,"Apple");
+     hm.put(2,"Mango");
+     hm.put(1,"Banana");
+     
+     System.out.println(hm.containsKey(2)); //true
+     System.out.println(hm.containsValue("Banana")); //true
+     System.out.println(hm.containsValue("Chikoo")); //false
+    
+    List<String> al = new ArrayList<>(Arrays.asList("one","two","three"));
+    
+    System.out.println(al.contains("two")); //true
+    
+    }
+}

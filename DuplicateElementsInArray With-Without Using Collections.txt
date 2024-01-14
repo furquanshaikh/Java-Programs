@@ -1,0 +1,62 @@
+import java.util.*;
+class DuplicateElementsInArray{
+    public static void main(String[] args) {
+    //WAP to Find Duplicate Elements In Array with using collections
+        int arr[]={11,2,11,5,1,2,11};
+        Set<Integer> s= new LinkedHashSet<>();
+
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    s.add(arr[i]);
+                    break;
+                }
+            }
+        }
+        
+        for(Integer a:s){
+            System.out.print(a+" ");    
+        }
+        
+    }
+}
+
+
+=====     =====     ==========     =====     =====
+
+//WAP to Find Duplicate Elements In Array without using collections
+
+class DuplicateElementsInArray{
+    public static void main(String[] args) {
+        int arr[]={11,2,11,2,1};
+        int count=0;
+        
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                    break;
+                }
+            }
+        }
+        
+        int dup[]=new int[count];
+        int newindex=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    dup[newindex]=arr[i];
+                    newindex++;
+                    break;
+                }
+            }
+        }
+        
+        for(int a:dup){
+            System.out.print(a+" ");    
+        }
+        
+    }
+}
+
+

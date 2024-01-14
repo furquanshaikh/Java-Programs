@@ -1,0 +1,12 @@
+import java.util.*;
+class ReverseArrayList{
+    public static void main(String[] args) {
+    //WAP to reverse an ArrayList
+    
+    List<String> al = new ArrayList<>(Arrays.asList("one","two","three"));
+    
+    Collections.reverse(al);
+    System.out.println(al);
+    
+    }
+}
