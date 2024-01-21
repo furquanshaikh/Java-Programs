@@ -1,0 +1,74 @@
+import java.util.*;
+class SortArray{
+    public static void main(String[] args) {
+//sort arrays in asc & desc order with sort method
+        int a[]={1,53,21};
+    
+        //asc order
+        int temp=0;
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]>a[j]){
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.println("Ascending Order");
+        for(int x:a){System.out.print(x+" ");}
+        
+        //Desc Order
+        int b[]={5,33,1,12,19};
+        int tempb=b[0];
+        for(int i=0;i<b.length;i++){
+            for(int j=i+1;j<b.length;j++){
+                if(b[i]<b[j]){
+                    tempb=b[i];
+                    b[i]=b[j];
+                    b[j]=tempb;
+                }
+            } 
+        }
+        System.out.println("Descending Order");
+        for(int y:b){System.out.print(y+" ");}
+    }
+}
+
+======================================================================================
+
+import java.util.*;
+class SortArray{
+    public static void main(String[] args) {
+//sort arrays in asc & desc order with sort method
+        int a[]={1,53,21};
+    
+        //asc order
+        int temp=0;
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]>a[j]){
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.println("Ascending Order");
+        for(int x:a){System.out.print(x+" ");}
+        
+        //Desc Order
+        int tempb=a[0];
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]<a[j]){
+                    tempb=a[i];
+                    a[i]=a[j];
+                    a[j]=tempb;
+                }
+            } 
+        }
+        System.out.println("Descending Order");
+        for(int y:a){System.out.print(y+" ");}
+    }
+}

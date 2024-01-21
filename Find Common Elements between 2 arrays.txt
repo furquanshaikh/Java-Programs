@@ -1,0 +1,31 @@
+
+class CommonElements {
+    public static void main(String[] args) {
+        //Find Common Elements between 2 arrays
+        int a[]={23,1,5,2,88};
+        int b[]={23,11,5,12,88};
+        int count =0;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<b.length;j++){
+                if(a[i]==b[j]){
+                    count++;
+                }
+            }
+        }
+        
+        int common[] = new int [count];
+        int newIndex=0;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<b.length;j++){
+                if(a[i]==b[j]){
+                    common[newIndex]=a[i];
+                    newIndex++;
+                }
+            }
+        }
+        
+        for(int c:common)
+        System.out.print(c+" ");
+        
+    }
+}

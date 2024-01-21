@@ -1,0 +1,30 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String str="a2b4c1d7";
+        StringBuilder result = new StringBuilder();
+        Map<Character,Integer> hm = new HashMap<>();
+        
+        for(int i=0;i<str.length();i++){
+            char charr = str.charAt(i);
+            
+            if(Character.isLetter(charr)){
+                int count=0;
+                
+                while (i + 1 < str.length() && Character.isDigit(str.charAt(i + 1))) {
+                count = count * 10 + Character.getNumericValue(str.charAt(++i));
+            }
+                hm.put(charr, hm.getOrDefault(charr, 0) + count);
+            }
+        }
+        System.out.print(hm);
+        for (Map.Entry<Character, Integer> entry : hm.entrySet()) {
+        char charr = entry.getKey();
+        int count = entry.getValue();
+        for (int j = 0; j < count; j++) {
+            result.append(charr);
+        }
+    }
+    System.out.print(result);
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.*;
+class ArraysEqualOrNot {
+    public static void main(String[] args) {
+//check if 2 arrays are equal or not
+        int a[]={1,5,2};
+        int b[]={5,2,1};
+        Boolean flag=true;
+        
+        if(a.length==b.length){
+            Arrays.sort(a);
+            Arrays.sort(b);
+            for(int i=0;i<a.length;i++){
+                if(a[i]!=b[i]){
+                    flag=false;
+                }
+            }
+        }else{
+            flag=false;
+        }
+        
+        if(flag){
+            System.out.print("Arrays are equal");
+        }else{
+            System.out.print("Arrays are not equal");
+        }
+    }
+}

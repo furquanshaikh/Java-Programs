@@ -1,0 +1,22 @@
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        //WAP to find common elements from 2 ArrayList
+        List<String> al1= new ArrayList<>();
+        al1.add("apple");
+        al1.add("mango");
+        al1.add("chickoo");
+        
+        List<String> al2= new ArrayList<>();
+        al2.add("grapes");
+        al2.add("mango");
+        al2.add("apple");
+        
+        List<String> commonOptions= new ArrayList<>(al1);
+        commonOptions.retainAll(al2);
+        
+        System.out.print(commonOptions);
+        
+    }
+}

@@ -1,0 +1,22 @@
+class Combine2ArraysIntoThird {
+    public static void main(String[] args) {
+//Add 2 Arrays Into Third
+        int a1[]={1,2,3};
+        int a2[]={7,8,9,5,6};
+        
+        int a3[]=new int[a1.length+a2.length];
+        int newIndex=0;
+        
+        for(int i=0;i<a1.length;i++){
+            a3[newIndex]=a1[i];
+            newIndex++;
+        }
+        for(int i=0;i<a2.length;i++){
+            a3[newIndex]=a2[i];
+            newIndex++;
+        }
+        for(int c:a3){
+            System.out.print(c+" ");    
+        }
+    }
+}

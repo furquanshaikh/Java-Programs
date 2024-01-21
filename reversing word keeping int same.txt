@@ -1,0 +1,52 @@
+public class ReverseWordsExample {
+    public static void main(String[] args) {
+        String str = "test12pop19java898python";
+        //tset12pop19avaj898nohtyp
+        String[] words = str.split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)|(?<=\\W)(?=\\w)|(?<=\\w)(?=\\W)");
+        
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            if (!word.matches("\\d+")) {
+                result.append(reverseString(word));
+            } else {
+                result.append(word);
+            }
+        }
+        
+        String reversedString = result.toString();
+        System.out.println(reversedString);
+    }
+
+    private static String reverseString(String input) {
+        return new StringBuilder(input).reverse().toString();
+    }
+}
+
+
+================== ========================
+
+method 2 -------
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String str="test12pop19java898python";
+        
+        String split[]=str.split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)|(?<=\\W)(?=\\w)|(?<=\\w)(?=\\W)");
+        StringBuilder result = new StringBuilder();
+        
+        for(String c:split){
+            if (!c.matches("\\d+")) {
+                result.append(reverseWord(c));
+            } else {
+                result.append(c);
+            }
+        }
+        String reversedString = result.toString();
+        System.out.println(reversedString);
+    }
+    public static String reverseWord(String word){
+        return new StringBuilder(word).reverse().toString(); 
+    }
+}

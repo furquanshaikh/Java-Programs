@@ -1,0 +1,15 @@
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        //sort chars in alphabetical order
+        String str="Apple";
+        char ch[] = str.toCharArray();
+        Arrays.sort(ch);
+        
+        String sorted = new String(ch);
+        
+        System.out.print(sorted);
+        
+    }
+}
